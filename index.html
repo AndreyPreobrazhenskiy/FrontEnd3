@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кухонная техника</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Кухонная техника</h1>
+  <button id="loadData">Загрузить данные</button>
+  <button id="simulateError">Симулировать ошибку</button>
+  <button id="wrongUrl">Неверный URL</button>
+  <button id="serverError">Ошибка сервера</button>
+
+  <div id="output">Здесь будет отображена информация о технике...</div>
+
+  <script type="module" src="index.js" defer></script>
+</body>
+</html>

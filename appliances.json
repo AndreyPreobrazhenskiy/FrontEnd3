@@ -1,0 +1,48 @@
+{
+    "title": "Каталог кухонной техники 2025",
+    "available": true,
+    "appliances": [
+      {
+        "brand": "Bosch",
+        "model": "MUM5",
+        "year": 2023,
+        "price": 25999,
+        "electric": true,
+        "colors": ["серебристый", "белый", "чёрный"],
+        "specific": {
+          "type": "Кухонный комбайн",
+          "power": 1000
+        }
+      },
+      {
+        "brand": "Philips",
+        "model": "HD9650",
+        "year": 2023,
+        "price": 18990,
+        "electric": true,
+        "colors": ["чёрный", "металлик"],
+        "specific": {
+          "type": "Фритюрница с горячим воздухом",
+          "power": 2225
+        }
+      },
+      {
+        "brand": "Redmond",
+        "model": "RMC-M90",
+        "year": 2022,
+        "price": 7990,
+        "electric": true,
+        "colors": ["белый", "чёрный"],
+        "specific": {
+          "type": "Мультиварка",
+          "power": 900
+        }
+      }
+    ],
+    "statistics": {
+      "totalModels": 3,
+      "averagePrice": 17626,
+      "electricCount": 3
+    }
+  }
+  

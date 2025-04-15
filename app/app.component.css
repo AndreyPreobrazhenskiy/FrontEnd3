@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+    padding: 8px;
+}
+  
+a.active {
+    font-weight: bold;
+    color: darkblue;
+}

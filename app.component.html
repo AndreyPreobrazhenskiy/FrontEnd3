@@ -1,0 +1,6 @@
+<div style="text-align:center; margin-top: 50px;">
+  <h1>Добро пожаловать в Digital Department!</h1>
+  <input [(ngModel)]="name" placeholder="Введите ваше имя" />
+  <button (click)="sayHello()">Поздороваться</button>
+  <h2 *ngIf="greeting">{{ greeting }}</h2>
+</div>

@@ -1,0 +1,29 @@
+<div *ngIf="tasks$ | async as tasks; else loading">
+  <ng-container *ngIf="tasks.length > 0; else empty">
+    <mat-card *ngFor="let task of tasks" class="task-card">
+      <mat-card-title>
+        #{{ task.id }} — {{ task.title }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        Тип: {{ task.type }} | Приоритет: {{ task.priority }} | Статус: {{ task.status }}
+      </mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ task.description || 'Нет описания' }}</p>
+        <p>Создатель: {{ task.creator }}</p>
+        <p>Исполнитель: {{ task.assignee || 'Не назначен' }}</p>
+        <p>Создано: {{ task.createdAt | date: 'short' }}</p>
+        <p>Обновлено: {{ task.updatedAt | date: 'short' }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+
+<ng-template #loading>
+  <div class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <p>Список задач пуст.</p>
+</ng-template>

@@ -1,0 +1,11 @@
+.task-card {
+    margin: 16px auto;
+    max-width: 600px;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  

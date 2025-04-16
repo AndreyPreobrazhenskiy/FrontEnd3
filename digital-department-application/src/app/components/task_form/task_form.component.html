@@ -1,0 +1,56 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="task-form">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Тип задачи</mat-label>
+    <mat-select formControlName="type" required>
+      <mat-option value="bug">Bug</mat-option>
+      <mat-option value="task">Task</mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.get('type')?.hasError('required')">Тип обязателен</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Приоритет</mat-label>
+    <mat-select formControlName="priority">
+      <mat-option value="critical">Critical</mat-option>
+      <mat-option value="high">High</mat-option>
+      <mat-option value="medium">Medium</mat-option>
+      <mat-option value="low">Low</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Статус</mat-label>
+    <mat-select formControlName="status" required>
+      <mat-option value="todo">To Do</mat-option>
+      <mat-option value="in_progress">In Progress</mat-option>
+      <mat-option value="done">Done</mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.get('status')?.hasError('required')">Статус обязателен</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Заголовок</mat-label>
+    <input matInput formControlName="title" required>
+    <mat-error *ngIf="form.get('title')?.hasError('required')">Заголовок обязателен</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Описание</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Исполнитель</mat-label>
+    <input matInput formControlName="assignee">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Создатель</mat-label>
+    <input matInput formControlName="creator" required>
+    <mat-error *ngIf="form.get('creator')?.hasError('required')">Создатель обязателен</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+    Сохранить задачу
+  </button>
+</form>

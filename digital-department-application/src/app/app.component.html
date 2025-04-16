@@ -1,0 +1,11 @@
+<div>
+  <h3>Навигационная панель</h3>
+  <div class="nav-links">
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Страница 1</a>
+    <a routerLink="/page2" routerLinkActive="active">Страница 2</a>
+    <a routerLink="/page3" routerLinkActive="active">Страница 3</a>
+    <a [routerLink]="['/show-name', 'Владислав']" routerLinkActive="active">Покажи своё имя</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

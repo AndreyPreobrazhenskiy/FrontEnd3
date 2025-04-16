@@ -1,0 +1,28 @@
+<div class="container">
+    <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <label for="userName">Имя</label>
+        <input id="userName" name="userName" formControlName="userName" />
+        <div class="error" *ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
+            Не указано Имя!
+        </div>
+        </div>
+    
+        <div class="form-group">
+        <label for="userSurname">Фамилия</label>
+        <input id="userSurname" name="userSurname" formControlName="userSurname" />
+        <div class="error" *ngIf="myForm.controls['userSurname'].invalid && myForm.controls['userSurname'].touched">
+            Не указана Фамилия!
+        </div>
+        </div>
+    
+        <button type="submit" [disabled]="myForm.invalid">Отправить!</button>
+    </form>
+    
+    <div class="user-list">
+        <h3>Пользователи</h3>
+        <ul>
+        <li *ngFor="let user of users">{{ user.userSurname }} {{ user.userName }}</li>
+        </ul>
+    </div>
+</div>  

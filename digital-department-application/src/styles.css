@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 40px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Стили для навигационной панели */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex; justify-content: center; align-items: center;
+}
+  
+.nav-links {
+    display: flex;
+    gap: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 5%;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #333;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+  
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+  
+.nav-links a.active {
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+}
+  
+.nav-links a:active {
+    background-color: #303f9f;
+}
+  
